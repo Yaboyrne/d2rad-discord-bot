@@ -1,0 +1,28 @@
+name: Destiny 2 Weekly RAD Update
+
+on:
+  schedule:
+    # Draait elke dinsdag om 17:15 UTC (18:15 wintertijd / 19:15 zomertijd)
+    - cron: '15 17 * * 2'
+  workflow_dispatch:
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code ophalen
+        uses: actions/checkout@v4
+
+      - name: Python instellen
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Dependencies installeren
+        run: pip install -r requirements.txt
+
+      - name: Script uitvoeren
+        env:
+          RAID_WEBHOOK_URL: ${{ secrets.RAID_WEBHOOK_URL }}
+          DUNGEON_WEBHOOK_URL: ${{ secrets.DUNGEON_WEBHOOK_URL }}
+        run: python bot.py
