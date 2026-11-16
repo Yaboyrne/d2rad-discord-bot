@@ -76,7 +76,7 @@ if __name__ == "__main__":
     
     send_discord_message(
         RAID_WEBHOOK,
-        "Destiny 2 Raid Rotatie",
+        "TWAR This Week at Raids",
         "⚔️ Wekelijkse Raid Rotatie",
         15844367,
         raids
@@ -84,7 +84,7 @@ if __name__ == "__main__":
     
     send_discord_message(
         DUNGEON_WEBHOOK,
-        "Destiny 2 Dungeon Rotatie",
+        "TWAD This Week at Dungeons",
         "🏰 Wekelijkse Dungeon Rotatie",
         3447003,
         dungeons
