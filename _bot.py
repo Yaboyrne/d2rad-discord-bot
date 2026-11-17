@@ -42,7 +42,7 @@ ACTIVITY_DATA = {
         "armor": "Resonant Fury Set"
     },
     "King's Fall": {
-        "image": "https://www.bungie.net/img/destiny_content/pgcr/kings_fall.jpg",
+        "image": "https://www.bungie.net/img/destiny_content/pgcr/raid_kings_fall.jpg",
         "exotic": "Touch of Malice (Scout Rifle)",
         "loot": "Zaouli's Bane, Smite of Merain, Doom of Chelchis, Defiance of Yasmin",
         "armor": "Darkhollow Set"
@@ -86,7 +86,7 @@ ACTIVITY_DATA = {
         "armor": "Moonfang-X7 & CODA Sets"
     },
     "Grasp of Avarice": {
-        "image": "https://www.bungie.net/img/destiny_content/pgcr/dungeon_grasp_of_avarice.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/3/32/GraspofAvariceMain.jpg/360px-GraspofAvariceMain.jpg",
         "exotic": "Gjallarhorn (Quest)",
         "loot": "Matador 64, Eyasluna, 1000 Yard Stare, Hero of Ages",
         "armor": "Thorn Armor Set"
@@ -110,7 +110,7 @@ ACTIVITY_DATA = {
         "armor": "Taken King Set"
     },
     "Warlord's Ruin": {
-        "image": "https://www.bungie.net/img/destiny_content/pgcr/dungeon_warlords_ruin.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/6/6c/Warlord%27sRuinPromo.jpg/360px-Warlord%27sRuinPromo.jpg",
         "exotic": "Buried Bloodline (Sidearm)",
         "loot": "Indebted Kindness, Vengeful Whisper, Naeem's Lance, Dragoncult Sickle",
         "armor": "Dark Age Set"
