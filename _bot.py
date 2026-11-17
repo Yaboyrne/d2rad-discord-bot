@@ -106,16 +106,16 @@ if __name__ == "__main__":
     
     send_discord_cards(
         RAID_WEBHOOK,
-        "Destiny 2 Raid Rotatie",
-        "⚔️ Actieve Raid",
+        "TWIR - This Week In Raids",
+        "⚔️ Active Raid",
         15844367,
         raids
     )
     
     send_discord_cards(
         DUNGEON_WEBHOOK,
-        "Destiny 2 Dungeon Rotatie",
-        "🏰 Actieve Dungeon",
+        "TWID - This Week In Dungeons",
+        "🏰 Active Dungeon",
         3447003,
         dungeons
     )
