@@ -187,21 +187,21 @@ def send_discord_cards(webhook_url, username, category_label, color, items):
         
         if info.get("exotic"):
             embed["fields"].append({
-                "name": "✨ Farmbare Exotic",
+                "name": "✨ Farmable Exotic",
                 "value": info["exotic"],
                 "inline": False
             })
             
         if info.get("loot"):
             embed["fields"].append({
-                "name": "🔫 Belangrijke Loot",
+                "name": "🔫 Important loot",
                 "value": info["loot"],
                 "inline": False
             })
 
         if info.get("armor"):
             embed["fields"].append({
-                "name": "🛡️ Armor & Bonus",
+                "name": "🛡️ Armor",
                 "value": info["armor"],
                 "inline": False
             })
