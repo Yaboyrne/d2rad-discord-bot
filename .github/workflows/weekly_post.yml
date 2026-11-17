@@ -25,4 +25,4 @@ jobs:
         env:
           RAID_WEBHOOK_URL: ${{ secrets.RAID_WEBHOOK_URL }}
           DUNGEON_WEBHOOK_URL: ${{ secrets.DUNGEON_WEBHOOK_URL }}
-        run: python bot.py
+        run: python _bot.py
