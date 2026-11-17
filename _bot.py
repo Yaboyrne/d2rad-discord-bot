@@ -1,4 +1,5 @@
 import os
+import time
 import html
 import requests
 from bs4 import BeautifulSoup
@@ -7,18 +8,18 @@ RAID_WEBHOOK = os.environ.get("RAID_WEBHOOK_URL")
 DUNGEON_WEBHOOK = os.environ.get("DUNGEON_WEBHOOK_URL")
 URL = "https://d2rad.com/"
 
-# Officiële Bungie.net banner-afbeeldingen per activiteit
+# Gecontroleerde Bungie.net banner-afbeeldingen
 ACTIVITY_IMAGES = {
     # Raids
     "Last Wish": "https://www.bungie.net/img/destiny_content/pgcr/raid_beanstalk.jpg",
     "Garden of Salvation": "https://www.bungie.net/img/destiny_content/pgcr/raid_garden_of_salvation.jpg",
     "Deep Stone Crypt": "https://www.bungie.net/img/destiny_content/pgcr/europa-raid-deep-stone-crypt.jpg",
     "Vault of Glass": "https://www.bungie.net/img/destiny_content/pgcr/vault_of_glass.jpg",
-    "Vow of the Disciple": "https://www.bungie.net/img/destiny_content/pgcr/raid_vow_of_the_disciple.jpg",
+    "Vow of the Disciple": "https://www.bungie.net/img/destiny_content/pgcr/raid_nemesis.jpg",
     "King's Fall": "https://www.bungie.net/img/destiny_content/pgcr/kings_fall.jpg",
     "Root of Nightmares": "https://www.bungie.net/img/destiny_content/pgcr/raid_root_of_nightmares.jpg",
     "Crota's End": "https://www.bungie.net/img/destiny_content/pgcr/crotas_end.jpg",
-    "Salvation's Edge": "https://www.bungie.net/img/destiny_content/pgcr/raid_salvations_edge.jpg",
+    "Salvation's Edge": "https://www.bungie.net/img/destiny_content/pgcr/raid_splinter.jpg",
     
     # Dungeons
     "Shattered Throne": "https://www.bungie.net/img/destiny_content/pgcr/dungeon_shattered_throne.jpg",
@@ -76,10 +77,7 @@ def send_discord_cards(webhook_url, username, category_label, color, items):
     if not webhook_url:
         raise ValueError(f"Webhook URL ontbreekt voor {category_label}!")
 
-    if not items:
-        return
-
-    embeds = []
+    # Stuur voor elke activiteit een los bericht zodat Discord de foto's niet samenvoegt
     for item in items:
         embed = {
             "title": f"{category_label}: {item}",
@@ -89,20 +87,19 @@ def send_discord_cards(webhook_url, username, category_label, color, items):
                 "text": "Bron: d2rad.com • Bungie API verified"
             }
         }
-        # Voeg de banner-afbeelding toe als deze in de lijst staat
+        
         image_url = ACTIVITY_IMAGES.get(item)
         if image_url:
             embed["image"] = {"url": image_url}
-            
-        embeds.append(embed)
 
-    payload = {
-        "username": username,
-        "embeds": embeds
-    }
+        payload = {
+            "username": username,
+            "embeds": [embed]
+        }
 
-    res = requests.post(webhook_url, json=payload, timeout=10)
-    res.raise_for_status()
+        res = requests.post(webhook_url, json=payload, timeout=10)
+        res.raise_for_status()
+        time.sleep(1)  # Korte pauze zodat de volgorde in Discord altijd klopt
 
 if __name__ == "__main__":
     raids, dungeons = get_d2rad_rotation()
@@ -122,4 +119,4 @@ if __name__ == "__main__":
         3447003,
         dungeons
     )
-    print("Berichten met afbeeldingen succesvol verzonden!")
+    print("Alle 4 kaarten succesvol verzonden!")
