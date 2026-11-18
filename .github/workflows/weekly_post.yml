@@ -1,9 +1,6 @@
 name: Destiny 2 Weekly RAD Update
 
 on:
-  schedule:
-    # Draait elke dinsdag om 17:15 UTC (18:15 wintertijd / 19:15 zomertijd)
-    - cron: '15 14 * * 3'
   workflow_dispatch:
 
 jobs:
