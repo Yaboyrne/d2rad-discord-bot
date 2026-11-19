@@ -54,7 +54,7 @@ ACTIVITY_DATA = {
         "armor": "Agony Set"
     },
     "Crota's End": {
-        "image": "https://www.bungie.net/img/destiny_content/pgcr/crotas_end.jpg",
+        "image": "https://destiny.wiki.gallery/images/a/a4/Crota_End_Team.jpg",
         "exotic": "Necrochasm (Quest / Oversoul Essence)",
         "loot": "Word of Crota, Abyss Defiant, Song of Ir Yût, Fang of Ir Yût",
         "armor": "Willbreaker Set"
@@ -68,7 +68,7 @@ ACTIVITY_DATA = {
 
     # Dungeons
     "Shattered Throne": {
-        "image": "https://www.bungie.net/img/destiny_content/pgcr/dungeon_shattered_throne.jpg",
+        "image": "https://res.cloudinary.com/ybmedia/image/upload/c_crop,e_improve,h_432,w_768,x_0,y_41/c_fill,f_auto,h_900,q_auto,w_1600/v1/m/a/1/a1fc4f86a56ba3ba29b4eacc7cefd6f2b61a045d/destiny-2-shattered-throne-dungeon-guide-2026.webp",
         "exotic": "Wish-Ender (Quest)",
         "loot": "Retold Tale, Waking Vigil, Tigerspite, Sleepless",
         "armor": "Reverie Dawn Set • Riven's Curse"
