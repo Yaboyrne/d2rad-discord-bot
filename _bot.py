@@ -116,13 +116,13 @@ ACTIVITY_DATA = {
         "armor": "Dark Age Set"
     },
     "Vesper's Host": {
-        "image": "https://www.bungie.net/img/destiny_content/pgcr/dungeon_vespers_host.jpg",
+        "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2024/11/Vespers_HostKeyArt-c79d86e6107ebf387de2.jpg",
         "exotic": "Ice Breaker (Sniper Rifle)",
         "loot": "VS Chill Inhibitor, VS Velocity Baton, VS Pyroelectric Propellant",
         "armor": "Spacewalk Set"
     },
     "Sundered Doctrine": {
-        "image": "https://www.bungie.net/img/destiny_content/pgcr/dungeon_sundered_doctrine.jpg",
+        "image": "https://destiny.wiki.gallery/images/5/5f/SunderedDoctrineArt.png",
         "exotic": "Finality's Auger (Linear Fusion Rifle)",
         "loot": "Unloved, Unworthy, Unsworn, Unveil",
         "armor": "Flain Set"
